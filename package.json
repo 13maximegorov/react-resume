@@ -2,6 +2,7 @@
   "name": "react-resume",
   "version": "0.1.0",
   "private": true,
+  "author": "Maxim Egorov <13maximegorov@gmail.com>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
