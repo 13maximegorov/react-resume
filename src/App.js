@@ -1,8 +1,12 @@
+import cn from './utils/cn'
+import 'boxicons'
 import './App.css'
 
-function App() {
+const app = cn('app')
+
+const App = () => {
   return (
-    <div className="App">
+    <div className={app()}>
       <h1>React</h1>
     </div>
   )
