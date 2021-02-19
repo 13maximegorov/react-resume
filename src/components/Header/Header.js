@@ -23,6 +23,8 @@ const Header = () => {
 
   const toggleMenu = () => setShowMenu(!showMenu)
 
+  const clickNavLink = () => setShowMenu(false)
+
   return (
     <div className={header()}>
       <Container>
@@ -33,7 +35,7 @@ const Header = () => {
             <ul className={nav('list')}>
               {navItems.map(item =>
                 <li className={nav('item')} key={item.id}>
-                  <a href={item.href} className={nav('link')}>
+                  <a href={item.href} className={nav('link')} onClick={clickNavLink}>
                     <i className={classnames(`bx bx-${item.icon}`, nav('icon'))}></i>
                     {item.title}
                   </a>
