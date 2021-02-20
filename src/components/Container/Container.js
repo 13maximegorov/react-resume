@@ -6,7 +6,7 @@ import './Container.css'
 const container = cn('container')
 
 const Container = ({children, className}) => {
-  return <div className={classnames(container(), className)}>{children}</div>
+  return <div className={classnames(className, container())}>{children}</div>
 }
 
 Container.propTypes = {

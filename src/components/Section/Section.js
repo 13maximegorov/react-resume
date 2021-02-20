@@ -6,7 +6,7 @@ import './Section.css'
 const section = cn('section')
 
 const Section = ({children, className, id}) => {
-  return <div className={classnames(section(), className)} id={id}>{children}</div>
+  return <div className={classnames(className, section())} id={id}>{children}</div>
 }
 
 Section.propTypes = {

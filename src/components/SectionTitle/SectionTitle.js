@@ -7,7 +7,7 @@ const sectionTitle = cn('section-title')
 
 const SectionTitle = ({children, className, tag}) => {
   const Tag = `${tag}`
-  return <Tag className={classnames(sectionTitle(), className)}>{children}</Tag>
+  return <Tag className={classnames(className, sectionTitle())}>{children}</Tag>
 }
 
 SectionTitle.propTypes = {

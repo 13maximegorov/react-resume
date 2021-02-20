@@ -4,3 +4,10 @@
     margin-left: var(--mb-3);
     margin-right: var(--mb-3);
 }
+
+@media screen and (max-width: 968px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

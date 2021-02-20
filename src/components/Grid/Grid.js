@@ -6,7 +6,7 @@ import './Grid.css'
 const grid = cn('grid')
 
 const Grid = ({children, className}) => {
-  return <div className={classnames(grid(), className)}>{children}</div>
+  return <div className={classnames(className, grid())}>{children}</div>
 }
 
 Grid.propTypes = {
