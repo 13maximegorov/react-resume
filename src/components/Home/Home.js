@@ -31,7 +31,7 @@ const Home = () => {
               <i className={classnames('bx bx-envelope', home('icon'))}></i>13maximegorov@gmail.com
             </span>
             <span className={home('information')}>
-              <i className={classnames('bx bx-phone', home('icon'))}></i>+79191550584
+              <i className={classnames('bx bx-phone', home('icon'))}></i>+7 919 155 05 84
             </span>
           </Grid>
         </Grid>

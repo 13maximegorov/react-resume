@@ -29,14 +29,14 @@ const Header = () => {
     <div className={header()}>
       <Container>
         <div className={nav()}>
-          <a href="#" className={nav('logo')}>Maxim</a>
+          <a href="#" className={nav('logo')}>Maxim Egorov</a>
 
           <div className={nav('menu', {show: showMenu})}>
             <ul className={nav('list')}>
               {navItems.map(item =>
                 <li className={nav('item')} key={item.id}>
                   <a href={item.href} className={nav('link')} onClick={clickNavLink}>
-                    <i className={classnames(`bx bx-${item.icon}`, nav('icon'))}></i>
+                    <i className={classnames('bx', `bx-${item.icon}`, nav('icon'))}></i>
                     {item.title}
                   </a>
                 </li>
