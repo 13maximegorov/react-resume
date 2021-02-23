@@ -15,7 +15,7 @@ const Social = () => {
   ]
 
   return (
-    <Section className={social()}>
+    <Section className={social()} id="social">
       <SectionTitle>Социальные сети</SectionTitle>
 
       <Grid className={social('container')}>

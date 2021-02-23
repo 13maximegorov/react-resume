@@ -10,6 +10,7 @@ const nav = cn('nav')
 const Header = () => {
   const navItems = [
     {id: 1, href: '#home', icon: 'home', title: 'Главная'},
+    {id: 1, href: '#social', icon: 'message', title: 'Социальные сети'},
     {id: 2, href: '#profile', icon: 'user', title: 'Профиль'},
     {id: 3, href: '#education', icon: 'book', title: 'Образование'},
     {id: 4, href: '#skills', icon: 'receipt', title: 'Навыки'},

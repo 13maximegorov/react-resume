@@ -2,6 +2,8 @@ import cn from '../../utils/cn'
 import Container from '../Container/Container'
 import Home from '../Home/Home'
 import Social from '../Social/Social'
+import Profile from '../Profile/Profile'
+import Education from '../Education/Education'
 import './Resume.css'
 
 const main = cn('main')
@@ -15,6 +17,8 @@ const Resume = () => {
           <div className={resume('left')}>
             <Home />
             <Social />
+            <Profile />
+            <Education />
           </div>
           <div className={resume('right')}></div>
         </div>
