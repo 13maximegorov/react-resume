@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import cn from '../../utils/cn'
 import {classnames} from '@bem-react/classnames'
 import Section from '../Section/Section'
@@ -14,17 +15,18 @@ const Home = () => {
     {id: 3, icon: 'phone', title: '+7 919 155 05 84'},
   ]
 
+  const [themeIcon, setThemeIcon] = useState('moon')
+
   const changeTheme = () => {
-    if (localStorage.getItem('theme') === 'dark') {
-      localStorage.setItem('theme', 'light')
-      localStorage.setItem('theme-icon', 'moon')
-      document.body.classList.remove('dark-theme')
-    } else {
+    document.body.classList.toggle('dark-theme')
+
+    if (document.body.classList.contains('dark-theme')) {
       localStorage.setItem('theme', 'dark')
-      localStorage.setItem('theme-icon', 'sun')
-      document.body.classList.add('dark-theme')
+      setThemeIcon('sun')
+    } else {
+      localStorage.setItem('theme', 'light')
+      setThemeIcon('moon')
     }
-    console.log(localStorage.getItem('theme-icon'))
   }
 
   return (
@@ -51,7 +53,7 @@ const Home = () => {
           </Grid>
         </Grid>
 
-        <i className={classnames(`bx bx-${localStorage.getItem('theme-icon')} change-theme`)} title="Переключить тему" onClick={changeTheme}></i>
+        <i className={classnames(`bx bx-${themeIcon} change-theme`)} title="Переключить тему" onClick={changeTheme}></i>
 
         <i className="bx bx-download download" title="Загрузить резюме"></i>
       </Section>
