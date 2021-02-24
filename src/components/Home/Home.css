@@ -59,3 +59,14 @@
     font-size: 1.2rem;
     margin-right: .25rem;
 }
+
+
+@media screen and (min-width: 968px) {
+    .home__container {
+        gap: 1.5rem;
+    }
+
+    .home__button-mobile {
+        display: none;
+    }
+}

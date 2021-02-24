@@ -47,6 +47,13 @@
     gap: 2rem;
 }
 
+@media screen and (max-width: 320px) {
+    .nav__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem .5rem;
+    }
+}
+
 .nav__item {
     text-align: center;
 }
@@ -70,4 +77,10 @@
 
 .nav__menu_show {
     bottom: var(--header-height);
+}
+
+@media screen and (min-width: 968px) {
+    .header {
+        display: none;
+    }
 }

@@ -7,3 +7,9 @@
     text-align: center;
     margin-bottom: var(--mb-3);
 }
+
+@media screen and (min-width: 968px) {
+    .section-title {
+        text-align: initial;
+    }
+}

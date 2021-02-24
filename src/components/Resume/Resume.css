@@ -1,0 +1,17 @@
+@media screen and (min-width: 968px) {
+    .resume {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        background: var(--container-color);
+        box-shadow: 0 0 8px rgba(13, 12, 12, .15);
+    }
+
+    .resume__left {
+        background: var(--container-color-alt);
+    }
+
+    .resume__left,
+    .resume__right {
+        padding: 0 1.5rem;
+    }
+}
