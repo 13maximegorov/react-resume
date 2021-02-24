@@ -7,6 +7,8 @@ import Education from '../Education/Education'
 import Skills from '../Skills/Skills'
 import Experience from '../Experience/Experience'
 import Certificate from '../Certificate/Certificate'
+import Languages from '../Languages/Languages'
+import Interests from '../Interests/Interests'
 import './Resume.css'
 
 const main = cn('main')
@@ -27,6 +29,8 @@ const Resume = () => {
           <div className={resume('right')}>
             <Experience />
             <Certificate />
+            <Languages />
+            <Interests />
           </div>
         </div>
       </Container>
