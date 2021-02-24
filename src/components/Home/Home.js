@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import cn from '../../utils/cn'
 import {classnames} from '@bem-react/classnames'
 import Section from '../Section/Section'
@@ -10,12 +10,19 @@ const home = cn('home')
 
 const Home = () => {
   const addressItems = [
-    {id: 1, icon: 'map', title: 'Россия, Уфа'},
-    {id: 2, icon: 'envelope', title: '13maximegorov@gmail.com'},
-    {id: 3, icon: 'phone', title: '+7 919 155 05 84'},
+    {icon: 'map', title: 'Россия, Уфа'},
+    {icon: 'envelope', title: '13maximegorov@gmail.com'},
+    {icon: 'phone', title: '+7 919 155 05 84'},
   ]
 
   const [themeIcon, setThemeIcon] = useState('moon')
+
+  useEffect(() => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-theme')
+      setThemeIcon('sun')
+    }
+  }, [])
 
   const changeTheme = () => {
     document.body.classList.toggle('dark-theme')
@@ -45,8 +52,8 @@ const Home = () => {
           </Grid>
 
           <Grid className={home('address')}>
-            {addressItems.map(item =>
-              <span className={home('information')} key={item.id}>
+            {addressItems.map((item, index) =>
+              <span className={home('information')} key={index}>
                 <i className={classnames('bx', `bx-${item.icon}`, home('icon'))}></i>{item.title}
               </span>
             )}

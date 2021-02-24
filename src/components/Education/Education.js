@@ -8,8 +8,8 @@ const education = cn('education')
 
 const Education = () => {
   const educationItems = [
-    {id: 1, title: 'Информационная безопасность телекоммуникационных систем', studies: 'Уфимский колледж радиоэлектроники, телекоммуникаций и безопасности', year: '2015 - 2019'},
-    {id: 2, title: 'Прикладная инфоматика (Цифровые технологии и защита информации)', studies: 'Уфимский государственный нефтяной технический университет', year: '2019 - 2024'},
+    {title: 'Информационная безопасность телекоммуникационных систем', studies: 'Уфимский колледж радиоэлектроники, телекоммуникаций и безопасности', year: '2015 - 2019'},
+    {title: 'Прикладная инфоматика (Цифровые технологии и защита информации)', studies: 'Уфимский государственный нефтяной технический университет', year: '2019 - 2024'},
   ]
 
   return (
@@ -18,7 +18,7 @@ const Education = () => {
 
       <Grid className={education('container')}>
         {educationItems.map((item, index) =>
-          <div className={education('content')} key={item.id}>
+          <div className={education('content')} key={index}>
             <div className={education('time')}>
               <span className={education('rounder')}></span>
               {educationItems.length - 1 === index

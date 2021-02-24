@@ -12,10 +12,10 @@ const interests = cn('interests')
 
 const Interests = () => {
   const interestsItems = [
-    {id: 1, icon: Airplane, title: 'Путешествие'},
-    {id: 2, icon: Hockey, title: 'Хоккей'},
-    {id: 3, icon: Skier, title: 'Горные лыжи'},
-    {id: 4, icon: Fitness, title: 'Фитнес'},
+    {icon: Airplane, title: 'Путешествие'},
+    {icon: Hockey, title: 'Хоккей'},
+    {icon: Skier, title: 'Горные лыжи'},
+    {icon: Fitness, title: 'Фитнес'},
   ]
 
   return (
@@ -23,8 +23,8 @@ const Interests = () => {
       <SectionTitle>Интересы</SectionTitle>
 
       <Grid className={interests('container')}>
-        {interestsItems.map(item =>
-          <div className={interests('content')} key={item.key}>
+        {interestsItems.map((item, index) =>
+          <div className={interests('content')} key={index}>
             <img src={item.icon} alt="icon" className={interests('icon')}/>
             <span className={interests('name')}>{item.title}</span>
           </div>

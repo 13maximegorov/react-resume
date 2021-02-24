@@ -9,15 +9,15 @@ const nav = cn('nav')
 
 const Header = () => {
   const navItems = [
-    {id: 1, href: '#home', icon: 'home', title: 'Главная'},
-    {id: 1, href: '#social', icon: 'message', title: 'Социальные сети'},
-    {id: 2, href: '#profile', icon: 'user', title: 'Профиль'},
-    {id: 3, href: '#education', icon: 'book', title: 'Образование'},
-    {id: 4, href: '#skills', icon: 'receipt', title: 'Навыки'},
-    {id: 5, href: '#experience', icon: 'briefcase-alt', title: 'Опыт работы'},
-    {id: 6, href: '#certificates', icon: 'award', title: 'Сертификаты и дипломы'},
-    {id: 7, href: '#languages', icon: 'font', title: 'Владение языками'},
-    {id: 8, href: '#interests', icon: 'dice-5', title: 'Интересы'},
+    {href: '#home', icon: 'home', title: 'Главная'},
+    {href: '#social', icon: 'message', title: 'Социальные сети'},
+    {href: '#profile', icon: 'user', title: 'Профиль'},
+    {href: '#education', icon: 'book', title: 'Образование'},
+    {href: '#skills', icon: 'receipt', title: 'Навыки'},
+    {href: '#experience', icon: 'briefcase-alt', title: 'Опыт работы'},
+    {href: '#certificates', icon: 'award', title: 'Сертификаты и дипломы'},
+    {href: '#languages', icon: 'font', title: 'Владение языками'},
+    {href: '#interests', icon: 'dice-5', title: 'Интересы'},
   ]
 
   const [showMenu, setShowMenu] = useState(false)
@@ -34,8 +34,8 @@ const Header = () => {
 
           <div className={nav('menu', {show: showMenu})}>
             <ul className={nav('list')}>
-              {navItems.map(item =>
-                <li className={nav('item')} key={item.id}>
+              {navItems.map((item, index) =>
+                <li className={nav('item')} key={index}>
                   <a href={item.href} className={nav('link')} onClick={clickNavLink}>
                     <i className={classnames('bx', `bx-${item.icon}`, nav('icon'))}></i>
                     {item.title}
