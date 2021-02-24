@@ -60,6 +60,33 @@
     margin-right: .25rem;
 }
 
+.change-theme {
+    position: absolute;
+    right: 0;
+    top: 2.2rem;
+    display: flex;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.change-theme:hover {
+    color: var(--title-color);
+}
+
+.download {
+    position: absolute;
+    left: 0;
+    top: 2.2rem;
+    display: flex;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.download:hover {
+    color: var(--title-color);
+}
 
 @media screen and (min-width: 968px) {
     .home__container {
@@ -68,5 +95,9 @@
 
     .home__button-mobile {
         display: none;
+    }
+
+    .download {
+        display: inline-block;
     }
 }

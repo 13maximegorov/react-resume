@@ -10,7 +10,6 @@ const Container = ({children, className}) => {
 }
 
 Container.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string
 }
 

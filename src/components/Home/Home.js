@@ -14,6 +14,19 @@ const Home = () => {
     {id: 3, icon: 'phone', title: '+7 919 155 05 84'},
   ]
 
+  const changeTheme = () => {
+    if (localStorage.getItem('theme') === 'dark') {
+      localStorage.setItem('theme', 'light')
+      localStorage.setItem('theme-icon', 'moon')
+      document.body.classList.remove('dark-theme')
+    } else {
+      localStorage.setItem('theme', 'dark')
+      localStorage.setItem('theme-icon', 'sun')
+      document.body.classList.add('dark-theme')
+    }
+    console.log(localStorage.getItem('theme-icon'))
+  }
+
   return (
     <div className={home()} id="home">
       <Section>
@@ -37,6 +50,10 @@ const Home = () => {
             )}
           </Grid>
         </Grid>
+
+        <i className={classnames(`bx bx-${localStorage.getItem('theme-icon')} change-theme`)} title="Переключить тему" onClick={changeTheme}></i>
+
+        <i className="bx bx-download download" title="Загрузить резюме"></i>
       </Section>
     </div>
   )
