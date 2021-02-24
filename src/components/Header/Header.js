@@ -15,7 +15,7 @@ const Header = () => {
     {id: 3, href: '#education', icon: 'book', title: 'Образование'},
     {id: 4, href: '#skills', icon: 'receipt', title: 'Навыки'},
     {id: 5, href: '#experience', icon: 'briefcase-alt', title: 'Опыт работы'},
-    {id: 6, href: '#certificates', icon: 'award', title: 'Сертификаты'},
+    {id: 6, href: '#certificates', icon: 'award', title: 'Сертификаты и дипломы'},
     {id: 7, href: '#languages', icon: 'font', title: 'Владение языками'},
     {id: 8, href: '#interests', icon: 'dice-5', title: 'Интересы'},
   ]

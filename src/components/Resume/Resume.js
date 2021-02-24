@@ -4,6 +4,9 @@ import Home from '../Home/Home'
 import Social from '../Social/Social'
 import Profile from '../Profile/Profile'
 import Education from '../Education/Education'
+import Skills from '../Skills/Skills'
+import Experience from '../Experience/Experience'
+import Certificate from '../Certificate/Certificate'
 import './Resume.css'
 
 const main = cn('main')
@@ -19,8 +22,12 @@ const Resume = () => {
             <Social />
             <Profile />
             <Education />
+            <Skills />
           </div>
-          <div className={resume('right')}></div>
+          <div className={resume('right')}>
+            <Experience />
+            <Certificate />
+          </div>
         </div>
       </Container>
     </div>

@@ -1,0 +1,13 @@
+.certificate__content {
+    gap: .5rem;
+}
+
+.certificate__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.certificate__location {
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+}
