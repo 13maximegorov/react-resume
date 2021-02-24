@@ -22,7 +22,7 @@ const ScrollButton = () => {
   }
 
   return (
-    <a href="#" className={scrollButton({'show': showScrollButton})}>
+    <a href="#" className={scrollButton({show: showScrollButton})}>
       <i className={classnames('bx bx-up-arrow-alt', scrollButton('icon'))}></i>
     </a>
   )
